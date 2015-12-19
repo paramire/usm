@@ -1,0 +1,659 @@
+¿Cuál es su rango de edad actual?
+- 25 - 29 años
+- 20 - 24 años
+- 30 - 34 años
+- 40 o más
+- 35 - 39 años
+
+Nivel de estudios de los padres
+- Enseñanza Media completa
+- Estudios Superiores Completos
+- Enseñanza Básica
+- Técnico Nivel Medio
+- Estudios Superiores incompletos
+- Técnico Universitario
+- Postgrado
+- Enseñanza Media incompleta
+
+¿Entre qué rango se encontró su promedio ponderado de postulación a la Universidad?
+- 400 - 500
+- 501 - 600
+- 601 - 700
+- 701 - 750
+- 751 - 800
+- Ingreso especial
+
+Sus estudios de enseñanza media fueron realizados en...
+- Colegio / Liceo Particular subvencionado - Científico Humanista
+- Colegio / Liceo Municipal - Científico Humanista
+- Colegio / Liceo Particular - Científico Humanista
+- Colegio / Liceo Particular subvencionado - Técnico Nivel Medio
+- Colegio / Liceo Particular - Técnico Nivel Medio
+- Colegio / Liceo Municipal - Técnico Nivel Medio
+- Extranjero
+
+Sus estudios de pregrado los realizó en ...
+- Casa Central
+- Campus Santiago
+- Sede Viña del Mar
+- Sede Concepción
+- Campus Rancagua
+
+Carrera
+- Ingeniería Comercial
+- Ingeniería Civil Industrial
+- Ingeniería Civil Telemática
+- Ingeniería Civil Informática
+- Ingeniería Civil Química
+- Ingeniería Civil Mecánica
+- Técnico Universitario en Química mención analítica
+- Ingeniería Civil Electrónica
+- Ingeniería en Diseño de Productos
+- Ingeniería en Mecánica de Procesos y Mantenimiento Industrial
+- Técnico Universitario en Electricidad
+- Ingeniería Civil
+- Ingeniería de Ejecución en Sistemas Computacionales
+- Ingeniería de Ejecución en Gestión Industrial
+- Técnico Universitario en Control de alimentos
+- Ingeniería de Ejecución Electrónica
+- Ingeniería Informática
+- Técnico Universitario en Proyecto y Diseño Mecánico
+- Ingeniería de Ejecución en Gestión de la Calidad
+- Ingeniería de Ejecución en Mantenimiento Industrial
+- Ingeniería Civil Metalúrgica
+- Arquitectura
+- Ingeniería Civil Eléctrica
+- Ingeniería en Aviación Comercial
+- Ingeniería de Ejecución Informática
+- Ingeniería Mecánica Industrial
+- Ingeniería Civil Matemática
+- Construcción Civil
+- Ingeniería Eléctrica
+- Técnico Universitario en Mecánica Industrial
+- Técnico Universitario en Construcción
+- Licenciatura en Ciencias Mención Física
+- Ingeniería Civil Ambiental
+- Ingeniería de Ejecución en Control e Instrumentación Industrial
+- Técnico Universitario en Informática
+- Técnico Universitario en Proyectos de Ingeniería
+- Técnico Universitario en Electrónica
+- Técnico Universitario en Prevención de Riesgos
+- Ingeniería en Prevención de Riesgos Laborales y Ambientales
+- Ingeniería de Ejecución en Proyectos Estructurales
+- Ingeniería de Ejecución en Proyectos de Ingenieria
+- Otra (escribir a priscilla.torres@usm.cl)
+- Piloto Comercial
+- Técnico Universitario en Matricería para plásticos y metales
+- Técnico Universitario en Mecánica automotriz
+- Técnico Universitario en Química
+- Técnico Universitario en Control del Medio Ambiente
+- Ingeniería en Construcción
+- Ingeniería de Ejecución en Química con mención control
+- INGENIERÍA DE EJECUCIÓN EN GESTIÓN Y CONTROL AMBIENTAL
+- Técnico Universitario en Mantenimiento Aeronáutico
+- Técnico en programación de Computadores
+- Ingeniería de Ejecución en Software
+- Técnico Universitario en Proyecto y Diseño Estructural
+- Técnico Universitario Dibujante proyectista
+- Ingeniería de Ejecución en Prevención de Riesgos
+- Ingeniería Ambiental
+- Ingeniería de Ejecución Metalúrgica
+- Técnico Universitario en Mecánica automotriz (Diesel)
+
+Año de egreso
+- 2010
+- 2011
+- 2008
+- 2007
+- 2006
+- 2005
+- 2009
+- 1997
+- 1986
+- 2004
+- 2000
+- 2001
+- 2002
+- 1982
+- 1987
+- 2003
+- mmm
+- 2012
+- 111
+- 1994
+- ccc
+- cc
+- 1993
+- 1995
+- 2013
+- 2099
+
+Año de titulación
+- 2011
+- 2007
+
+Ciudad en la que reside actualmente
+- Quilpué
+- Villa Alemana
+- Santiago
+- Viña del Mar
+- Iquique
+- Curicó
+- Limache
+- Concepción
+- Valparaíso
+- Temuco
+- Talcahuano
+- Algarrobo
+- Extranjero (América del Norte)
+- Extranjero (Oceanía - Australia)
+- Calama
+- Rancagua
+- Machalí
+- Paine
+- Puerto Montt
+- Quillota
+- Extranjero (Europa)
+- Copiapó
+- San Fernando
+- Talca
+- Vallenar
+- Antofagasta
+- Punta Arenas
+- Curacaví
+- Extranjero (Asia)
+- Buin
+- Arauco
+- Los Angeles
+- Linares
+- San Francisco de Mostazal
+- La Calera
+- Ovalle
+- La Serena
+- Cauquenes
+- Peñaflor
+- Los Andes
+- San Antonio
+- Extranjero (América del Sur)
+- La Ligua
+- Nogales
+- Cabildo
+- Llay - Llay
+- Salamanca
+- Casablanca
+- Ventanas
+- Chiguayante
+- Rengo
+- Hualpen
+- San Pedro de La Paz
+- La Cruz
+- Chillán
+- Hijuelas
+- Olmué
+- Coquimbo
+- Hualqui
+- Coronel
+- San Vicente de Tagua Tagua
+- Extranjero (Oceanía)
+- Ancud
+- Catemu
+- Lota
+- Renaico
+- Constitución
+- Angol
+- San Felipe
+- Puerto Varas
+- Santa Barbara
+- Penco
+- Castro
+- Osorno
+- Extranjero (Centroamerica)
+- Parral
+- Mulchén
+- Tucapel (Concepción)
+- Nacimiento
+- Curanilahue
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad de Chile]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad Católica]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad de Santiago]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad de Concepción]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad de Talca]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Inacap]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad Católica de Valparaíso]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad Adolfo Ibáñez]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Duoc UC]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad de Valparaíso]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+¿Por qué cree que la UTFSM se asemeja a las siguientes Instituciones? [Universidad del Bío Bío]
+- No opino
+- Imagen Universidad
+- Perfil Técnico / Tecnológico
+- Calidad educación
+- Buen nivel de alumnos
+
+En la actualidad ¿Se encuentra trabajando?
+- Si
+- No
+
+Si no está trabajando ¿Cuál es el motivo?
+- No encuentro trabajo
+- Continuidad de estudios
+- Opción propia
+
+Si se encuentra en un programa de continuidad de estudios ¿Qué motivó su continuación de estudios?
+- Para certificar conocimientos que ya he adquirido en la práctica
+- Perfeccionamiento
+- Para acceder a un mejor trabajo
+- Es una mejor herramienta para encontrar trabajo
+- Mi carrera no es validada en el mercado
+- Para acceder a una mejor remuneración en mi actual trabajo
+- La empresa me envió
+
+Tamaño de la empresa donde trabaja
+- Microempresa (hasta 9 trabajadores)
+- Pequeña empresa (de 10 a 49 trabajadores)
+- Mediana Empresa (de 50 a 199 trabajadores)
+- Gran Empresa (Más de 200 trabajadores)
+
+
+¿Cuál es su cargo actual?
+- Coordinador
+- Desarrollador
+- Ingeniero
+- Líder del proyecto
+- Asesor
+- Analista
+- Ejecutivo Senior
+- Gerente
+
+Supervisor
+- Jefe de Área / Sección / Departamento / Local
+- Ingeniero Trainee
+- Técnico Superior Universitario
+- Consultor
+- Asistente
+- Ayudante
+- Administrador
+- Administrativo
+- Especialista
+- Subgerente de área
+- Socio
+- Director de área
+- Encargado de Área / Sección / Departamento / Local
+- Diseñador
+- Auditor
+- Programador
+- Inspector
+- Proyectista
+- Vendedor
+- Representante
+- Planeador
+- Prevencionista de Riesgos
+- Operativo
+- Subgerente / Subdirector de área
+- Ejecutivo Junior
+- Operario
+- Técnico
+- Arquitecto
+- Director de División
+- Profesor / Investigador
+- Profesional Independiente
+
+Tiempo en la empresa
+- Menos de 6 meses
+- Entre 6 meses y un año
+- Entre uno y 3 años
+- Entre 3 y 5 años
+- Más de 5 años
+
+Situación contractual
+- Contrato a plazo indefinido
+- Trabajo en diversos proyectos
+- Profesional a honorarios
+- servicio público a contrata
+- Informal sin contrato
+- Dueño de la empresa
+- Contrato a plazo fijo
+- contrata (empleado público)
+- a contrata
+- Honorarios
+- externo
+
+Rango de sueldo líquido
+- Menos de $200.000
+- $200.001 - $350.000
+- $350.001 - $500.000
+- $500.001 - $750.000
+- $750.001 - $1.000.000
+- $1.000.001 - $1.250.000
+- $1.250.001 - $1.500.000
+- $1.500.001 - $2.000.000
+- $2.000.001 - $2.500.000
+- $2.500.001 - $3.000.000
+- Más de $3.000.000
+
+¿En qué Sector trabaja?
+- Educación
+- Otro
+- Transporte y Telecomunicaciones
+- Retail
+- Energía
+- Minería
+- Gran Comercio
+- Financiero
+- Forestal
+- Administración Pública
+- Agropecuario
+- Construcción
+- Salud
+- Industria manufacturera no metálicas
+- Inmobiliario
+- Industria manufacturera metálicas
+- Pequeño comercio
+- Pesca
+- Turismo
+
+Considera que su trabajo es acorde a su especialidad
+- Si
+- No
+
+¿Cuánto tiempo se demoró en encontrar trabajo?
+- Menos de 3 meses
+- Entre 3 y 6 meses
+- Entre 6 y 11 meses
+- Más de un año
+
+Considera que su remuneración actual es acorde a su preparación profesional
+- Si
+- No
+
+¿Cómo evalúa el nivel de cumplimiento de las expectativas que tenía al egresar  respecto de su situación actual?
+- Cumplidas
+- Muy cumplidas
+- Poco cumplidas
+- Nada cumplidas
+
+¿Cursa estudios de postgrado?
+- Si
+- No
+
+¿Qué tan de acuerdo estaría que su hijo estudie en la USM?
+- Muy de acuerdo
+- De acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Tiene pensado hacer cursos de postgrado (si ya hizo uno ¿hacer otro?)
+- Si
+- No
+
+Si está interesado le gustaría hacerlo en la UTFSM
+- Si
+- No
+
+¿Algunos de sus padres estudió en la USM?
+- Si
+- No
+
+¿Tiene algún otro pariente que sea exalumno de la USM?
+- Si
+- No
+
+¿Qué tan satisfecho se encuentra con el proceso formativo de su carrera?
+1-7
+
+¿Qué tan satisfecho se encuentra con la infraestructura de tu Sede o Campus?
+1-7
+
+¿Qué tan satisfecho se encuentra con la experiencia universitaria vivida?
+1-7
+
+La UTFSM es una Universidad de prestigio [La UTFSM es una Universidad de prestigio]
+- Totalmente de acuerdo
+- De acuerdo
+- Indiferente
+- Desacuerdo
+- Totalmente en Desacuerdo
+
+La UTFSM es una Universidad de prestigio [La UTFSM es una Universidad sólida en términos de la formación que entrega]
+- Totalmente de acuerdo
+- De acuerdo
+- Indiferente
+- Desacuerdo
+- Totalmente en Desacuerdo
+
+La UTFSM es una Universidad de prestigio [De la UTFSM egresan profesionales con una base técnica]
+- Totalmente de acuerdo
+- De acuerdo
+- Indiferente
+- Desacuerdo
+- Totalmente en Desacuerdo
+
+La UTFSM es una Universidad de prestigio [La UTFSM se caracteriza por la exigencia en sus planes de estudio]
+- Totalmente de acuerdo
+- De acuerdo
+- Indiferente
+- Desacuerdo
+- Totalmente en Desacuerdo
+
+La UTFSM es una Universidad de prestigio [La UTFSM se caracteriza por ser una Universidad de punta en carreras tecnológicas]
+- Totalmente de acuerdo
+- De acuerdo
+- Indiferente
+- Desacuerdo
+- Totalmente en Desacuerdo
+
+La UTFSM es una Universidad de prestigio [La UTFSM se caracteriza por su calidad docente]
+- Totalmente de acuerdo
+- De acuerdo
+- Indiferente
+- Desacuerdo
+- Totalmente en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Capacidad de Adaptación]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Capacidad de Compromiso]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Empatía]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Productividad]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Autocuidado]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Tolerancia a la frustración]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Liderazgo]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Comunicación efectiva]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Capacidad de delegar]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Capacidad de negociación]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Planificación]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Capacidad de gestionar]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Capacidad de Trabajar en equipo]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Actualización del conocimiento (Busca constantemente tener los conocimientos más actuales para desarrollarse adecuadamente en su que hacer)]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Relaciones públicas]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Pensamiento Analítico]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Manejo de tecnologías]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Dominio de inglés escrito]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Dominio de inglés hablado]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Dinamismo y energía]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+
+Marque su grado de acuerdo o desacuerdo sobre las competencias que usted ha tenido que desarrollar en el mundo empresarial [Orientación al cliente externo e interno]
+- Muy de Acuerdo
+- De Acuerdo
+- Indiferente
+- Desacuerdo
+- Muy en Desacuerdo
+

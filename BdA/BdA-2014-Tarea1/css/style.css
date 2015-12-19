@@ -1,0 +1,66 @@
+@font-face{
+	src:url(GillSans.ttf);
+	font-family: 'GillSans';
+}
+
+html, body, center{
+	background-color: #505050;
+	height: 100%;
+}
+#header, #create, #buscador, #grafico, #carga, #tablas{
+	font-family: GillSans;
+	/*padding: 30px 0px 30px 0px;*/
+	text-align: center;
+	height: 25%;
+	/*border: 2px solid #FEFEFE;*/
+	margin-left: 125px;
+	margin-right: 125px;
+	border-bottom: 2px solid #666666;
+}
+#header, #carga, #tablas{
+	background-color: #FFFFFF;	
+}
+#header{
+	padding-left: 20px;
+	padding-bottom: 0px;
+	text-align: left;
+	font-size: 30px;
+}
+#create, #grafico,#buscador{
+	background-color: #F1F1F1;
+}
+#linkDeDescarga{
+	display: none;
+}
+
+#shadow{
+	background-image: url(../image/content-footer-shadow-bg.gif);
+	height: 15px;
+}
+#infTable,#contTable{
+	display: none;
+}
+#botonBuscador{
+	display: none;
+}
+h2{
+	padding-top: 3px;
+}
+table{
+	margin: 5px auto 5px auto;
+}
+td{
+	padding: 5px 5px;
+	border: 1px solid #505050;
+}
+#grafico{
+	height: 750px;
+}
+#containerGraficos{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#referBuscador{
+	display: none;
+}

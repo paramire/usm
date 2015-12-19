@@ -1,0 +1,369 @@
+\documentclass[letter, 10pt]{article}
+\usepackage[latin1]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[dvips]{graphicx}
+\usepackage{url}
+\usepackage[top=3cm,bottom=3cm,left=3.5cm,right=3.5cm,footskip=1.5cm,headheight=1.5cm,headsep=.5cm,textheight=3cm]{geometry}
+
+\begin{document}
+\title{Inteligencia Artificial \\ \begin{Large}Estado del Arte: Problema Stable Marriage\end{Large}}
+\author{Patricio Ramirez Jofre}
+\date{\today}
+\maketitle
+
+
+%--------------------No borrar esta secci\'on--------------------------------%
+\section*{Evaluaci\'on}
+
+\begin{tabular}{ll}
+Resumen (5\%): & \underline{\hspace{2cm}} \\
+Introducci\'on (5\%):  & \underline{\hspace{2cm}} \\
+Definici\'on del Problema (10\%):  & \underline{\hspace{2cm}} \\
+Estado del Arte (35\%):  & \underline{\hspace{2cm}} \\
+Modelo Matem\'atico (20\%): &  \underline{\hspace{2cm}}\\
+Conclusiones (20\%): &  \underline{\hspace{2cm}}\\
+Bibliograf\'ia (5\%): & \underline{\hspace{2cm}}\\
+ &  \\
+\textbf{Nota Final (100\%)}:   & \underline{\hspace{2cm}}
+\end{tabular}
+%---------------------------------------------------------------------------%
+\vspace{2cm}
+
+
+\begin{abstract}
+En este informe se representar\'a y explicar\'a el problema Stable Marriage, sus variaciones m\'as 
+importantes, que tipo de aproximaciones existen para la resoluci\'on de estas, que situaciones modela o 
+resuelve y qu\'e algoritmos son \'utiles. El Stable Marriage Problem (SM o SMP), consiste en un grupo de 
+\textit{n} hombres y otro grupo de \textit{n} mujeres, los cuales cada uno de ellos tiene una lista de 
+preferencia del sexo opuesto.	El problema consiste en crear matrimonios estables (Stable), o sea, que 
+no exista deseo por otra persona o divorcio.	El problema SM puede resolverse en tiempo polinomial, 
+pero las algunas variaciones de Stable Marriage with Incomplete lists and Ties (SMTI), pueden transformarse
+en un problema NP-Hard. 
+\end{abstract}
+
+\section{Introducci\'on}
+
+El prop\'osito de informe corresponde a la identificaci\'on, estudio y desarrollo del problema llamado Stable Marriage Problem, y sus variaciones 
+existentes, tales como el ``Stable Marriage with Ties" (SMT), ``Stable Marriage with Incomplete Lists" (SMI) y una combinaci\'on de los anteriores
+``Stable Marriage with Ties and Incomplete Lists" (SMTI), el tipo de problema mas ambicioso de resolver. 
+Para ello se presentar\'an una o algunas definiciones del problema, explicando su funcionamiento y algunas representaciones para
+las variaciones existentes, se ver\'an distintos algoritmos, t\'ecnicas, heur\'isticas y enfoques utilizados desde la formulaci\'on de este 
+problema en 1962 por David Gale y Lloyd Shapley \cite{GaleShapley62}, ademas se presentaran los avances mas importantes, que cosas se ha hechos respecto
+a este problema en la literatura y hacia donde avanza el estudio. \\
+
+\indent El Stable Marriage Problem, consiste en \textit{n} hombres y \textit{n} mujeres, donde cada uno de ellos tiene una lista 
+de preferencia ordenada con los miembros del sexo opuesto, siendo el objetivo crear parejas estables, o sea, que tanto hombre
+como mujer no deseen divorciarse o separarse \cite{GaleShapley62}. Con el pasar de los a\~nos en las distintas variaciones
+se ha refinado o modificado este problema agregando otras variables, conceptos y funciones que fortalecen el problema, se definen elementos como  
+``Weakly Marriage" (Matrimonio Debil) y ``Strong Marriage" (Matrimonio Fuerte), y estos basados en ``Blocking Pairs" (Matrimonio donde Hombre
+ y Mujer deseen estar con otra pareja).  \\ 
+\indent SMP tiene muchas aplicaciones en la vida real, puede representar y solucionar distintas situaciones, como cierto tipo de problemas 
+similares y muy relacionados con problemas de asignaci\'on, asignaciones Hospital-Residente, problemas de matching, etc. 
+En consecuencia conocer las distintas de representaciones es de gran ayuda para resolver muchas situaciones del \'ambito 
+de la Inform\'atica, Econom\'ia, Matematicas, etc,  siendo \'este un problema muy interesante de estudiar.\indent En el \'ambito de Inform\'atica,
+ si bien las versiones SM, SMI y SMT pueden ser resueltas en tiempos polinomiales tanto SMTI y la escala de datos para hacer
+ matching son desaf\'ios interesantes que pueden ser atacados por Algoritmos m\'as ambiciosos.\\ 
+\indent	Este informe est\'a estructurado con tal de obtener un flujo de informaci\'on sobre el problema Stable Marriage Problem, comenzaremos definiendo el 
+problema y sus variaciones m\'as conocidas, adem\'as de ciertas aproximaciones a ellas, comentare del Estado del Arte del problema, entregando ciertos 
+conceptos y resultados obtenido para cada aproximaci\'on del problema, en la etapa final compartir\'e un modelo matem\'atico y finalizando con 
+conclusiones respecto a la informaci\'on obtenida.    
+
+\section{Definici\'on del Problema}
+
+ El problema Stable Marriage, fue definido por David Gale y Lloyd Shapley en 1962 \cite{GaleShapley62},
+ donde $m$ hombres y $n$ mujeres, crean listas de preferencias estrictamente ordenadas con todos los miembros del sexo opuesto, 
+luego se define un \textit{Matching}, correspondiente a un par ordenado hombre-mujer, que define que 
+el hombre \textbf{m} y la mujer \textbf{w} estan emparejados, ademas se definen los \textit{Blocking Pairs}, que ocurren para una pareja
+$(m_i,w_i)$, el hombre $m_i$ prefiere a una mujer $w_j$ que a su actual pareja (o Matching), e la mujer $w_j$ prefiere a $m_i$ 
+que a su pareja actual, de esto se define una pareja \textit{estable}, como aquellos Matching que no permiten un 
+\textit{Blocking Pair} .
+ Las variaciones mas conocidas son SM con listas incompletas, SM con Ties(Empates) y una combinaci\'on de los anteriores el 
+SM with Incomplete Lists and Ties, 
+
+\subsection{Stable Marriage with Incomplete Lists}
+Para este problema, muy parecido al problema original, pero se permite que a cada uno de los hombres y mujeres, pueden tener
+una lista incompleta de intergrantes del sexo opuesto. Es as\'i como en esta representaci\'on, podemos definir
+que un hombre $m$ es \textit{aceptable} si aparece en la lista de una mujer $w$, e \textit{inaceptable}, en el de que no aparezca
+en la lista de preferencias, esto se aplica contrariamente para las mujeres en las listas de preferencias de los hombres.
+\indent Adem\'as cambia el concepto de \textit{estabilidad}, entonces un Matching M en una instancia I de SMI 
+se considera estable si no existe un par (hombre, mujer), tal que para que cada uno:
+\begin{itemize}
+\item Se encuentren sin pareja en M y encuentran a otro \textit{aceptable} \'o
+\item Prefieren a otra persona que a su pareja.
+\end{itemize}
+
+Esto implica para que un \textit{matching estable} no es necesario que sean \textit{matching} completo, esto quiere decir que puede existir un
+grupo para hombres y mujeres que no se encuentran en pareja dentro del \textit{matching}.
+Esto implica que todos los \textit{matching estables} para una instancia 
+I de SMI, tienen el mismo tama\~no, o sea involucra exactamente la misma cantidad de hombres y mujeres \cite{ManloveIrving02Hard}
+
+\subsection{Stable Marriage with Ties}
+
+Otra variaci\'on importante de Stable Marriage Problem, surge cuando alg\'un hombre \'o mujer, requiere hacer una lista de 
+preferencias estrictamente ordenada del sexo opuesto, tomando en cuenta que hay ciertos elementos del conjunto de preferencias
+que son indiferentes entre si, es \'asi que se definen las \textit{ties} o empates, se define una instancia de SM, como SMT
+cuando se admiten \textit{ties}, en consecuencia un \textit{Matching} se considera \textit{estable} cuando existe un par (hombre, 
+mujer) que prefieren estar con otro que con su pareja, de estos criterios, se definen diferentes los conceptos de estabilidad:
+
+\begin{itemize}
+\item \textit{Weak stability} para un Matching M, no existe un par (m,w), donde cada uno de ellos prefiere estrictamente estar
+con otro que con su pareja en M.
+\item \textit{Strongly stability} para un matching M, cuando existe un par (m,w), donde el hombre $m$ prefiere 
+estrictamente a la mujer $w$ y $w$ prefiere estrictamente a $m$.
+\item \textit{Super Stability}, donde no existe un par (m,w) tal que alguno de ellos prefieran a estar con otra persona o es
+ indeferente entre ellas.\cite{ManloveIrving02Hard,ThesisIoannis10}
+\end{itemize} 
+ 
+
+\subsection{Incomplete Lists with Ties}
+	Para esta variaci\'on del problema debemos tener en cuenta las dos variaciones anteriores, ya que el problema \textit{Stable
+Marriage Problem with Incomplete List and Ties}, genera una representaci\'on de este modelo combinando ambas ideas, las listas 
+incompletas de SMI, y la indiferencia o \textit{ties} del SMT
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{l l}
+$m_1: w_3 w_2$ & $w_1: m_1 m_2 $ \\
+$m_2: (w_2,w_1) w_3$ & $w_2: m_1 (m_3 m_2) $ \\
+$m_3: (w_2,w_1)$ & $w_3: ( m_1 m_2) $ \\
+\end{tabular}
+\caption{Ejemplo SMTI}
+\end{table}
+
+\indent Los conceptos de \textit{Weakly stable}, \textit{Strongly Stable} y \textit{Super Stable}, cambian
+en base a las nuevas condiciones del problema, para un Matching M, se tienen \'asi los siguientes definiciones de estabilidad:
+
+\begin{itemize}
+\item \textit{Weakly stable} se define cuando, no existe un par (X,Y), donde cada uno de ellos se encuentra 
+\textit{aceptable} o prefiere estrictamente estar con otro que con su pareja en M.
+
+\item \textit{Strongly stable} sucede cuando un par (X,Y) tal que (a) \textbf{X} no tiene pareja en M y encuentra a \textbf{Y} aceptable o prefiere estrictamente a \textbf{Y} que su pareja en M,(b) \textbf{Y} no tiene pareja en M y encuentra a
+\textbf{X} aceptable \'o prefiere estrictamente \textbf{Y} que a su pareja en M \'o \textbf{Y} es indiferente entre
+\textbf{X} y su pareja en M .
+
+\item \textit{Super stable} si no existe una par (x,y) tal que cada uno de ellos no tiene una pareja en M y encuentra al otro 
+aceptable, \'o si prefiere estrictamente a su pareja en M \'o es indiferente entre ellos.\cite{ThesisPodhradsky10}
+\end{itemize}
+
+El problema SMTI es el mas ambicioso, ya que a diferencia de SMT, el largo entro los Matching posibles pueden ser de distintos tama\~nos, es asi que buscar un Matching Maximo(Un Matching mas largo)se convierte en un problema NP-Hard.
+Es asi que algunos de los algoritmos que se hablaran en las siguientes secciones, buscan atacar la cardinalidad de los Matching
+generados
+
+AGREGAR COMPLEJIDADES
+
+\subsection{Otras Variaciones}
+\begin{itemize}
+\item \textbf{Stable Marriage Problem}: en este problema no se definen dos grupos de personas, si no un solo gran grupo de $2n$ integrantes
+donde cada uno de ellos crea una lista de preferencias para los $2n-1$ otros integrantes. Dadas estas condiciones este problema es 
+muy similar a problema original de Stable Marriage Problem. \cite{IwamaMiyazaki08Survey}.
+\item \textbf{Hospital/Resident Problem}: este problema representa asignaci\'on de pacientes a cada hosptial de la zona basado en su 
+preferencia y la cuota del hospital. Se generan dos grupos, uno de residentes (R) y otro de hospitales (H) y para cada hospital una 
+cuota asignada (C). Este problema se asemeja mas a el tipo SMI, considerando que un Hospital no se encuentra en el Matching si 
+tiene menos residentes que la cuota.\indent Este problema se puede
+reducir a un problema SM, definiendo que cada \textbf{C} instancias para un Hospital, una para cada posible Residente \cite{IwamaMiyazaki08Survey}.
+\end{itemize}
+
+\section{Estado del Arte} 
+
+\subsection{SM}
+El problema original \textit{Stable Marriage Problem}, se presento en el a\~no 1962, por David Gale y Lloyd Shapley en un 
+articulo llamado \textit{College Admission and the Stability of Marriage} del journal \textit{American Mathematical Monthly} 
+\cite{GaleShapley62} en esa publicaci\'on presentan ciertos algoritmos para encontrar un Matching estable en tiempo
+$O(n^2)$, donde toma para cada hombre la mejor pareja posible, este caso es \textit{man-optimal} o sea que favorece al 
+hombre esencialmente, aunque se aplique con tal de buscar la mejor pareja para las mujeres, este crearia un resultado 
+\textit{woman-optimal}.
+
+El algoritmo de Gale y Shapley siendo que encontraba matching estables pero poco favorables para alguno de grupos, ya sea los
+hombres o las mujeres, es por eso que se buscan metodos para obtener matching estables basados en otros aspectos del problema
+es por eso que que en 1989, Dan Gusfield and Robert W. Irving postulan metodos para encontrar matching estables\cite{Gusfield89},
+mayoritariamente basados en los posici\'on de un hombre \textbf{m} o una mujer \textbf{w}, $p_w(m)$ corresponde a la posici\'on de
+la mujer \textbf{w} para el hombre \textbf{m}, de esto se define
+
+\begin{align}
+r(M) = \underset{(m,w)\in M}{max} max (p_m(w),p_w(m)) \label{regret} \\
+c(M) = \underset{(m,w) \in M}{\sum} p_m(w) + \underset{(m,w) \in M}{\sum} p_w(m) \label{eqal} \\
+d(M) = \underset{(m,w) \in M}{\sum} p_m(w) - \underset{(m,w) \in M}{\sum} p_w(m) \label{sexeq}
+\end{align}
+
+Para encontrar un \textit{regret stable matching}, \textit{eqalitarian stable matching} y \textit{sex-equal stable matching} se debe encontrar 
+los valore minimos para \textit{regret cost} \eqref{regret}, \textit{egalitarian cost} \eqref{eqal}, y \textit{sex-equalness} \eqref{sexeq} 
+respectivamente.\cite{Gusfield89}
+
+\subsection{SMI y SMT}
+
+En 1994 Robert W. Irving muestra que para un problema SMT se puede encontrar un matching \textit{weakly stable} 
+o \textit{Super stable} en tiempo $O(n^2)$, para aquellos algoritmos que busquen estos tipos de Matching
+ o la no existencia en caso del \textit{Super Stability}, adem\'as presenta un algoritmo basado en un extension del 
+ algoritmo de Gale y Shapley, que puede obtener una soluci\'on \textit{Strongly Stable} si existe una soluci\'on en un 
+ tiempo de ejecuci\'on $O(n^2)$\cite{Irving94}
+ 
+\subsection{SMTI}
+
+En 2002 Manlove prueba que MAX SMTI (Maxima Cardinalidad para los Matching en una instancia I de SMTI)
+es del tipo NP-HARD, incluso para algunos casos muy restringidos con Ties, adem\'as 
+muestra que MAX SMTI es NP-completo, cuando las Ties solo existen en un lado (Hombres o Mujeres), \'o si solo hay
+un Tie por lista y el largo de las tie es igual a 2, estos resultados se aplicando cuando se busca la Minima Cardinaliad de 
+los Matching\cite{ManloveIrving02Hard}.
+
+\subsection{Algoritmos}
+
+La mayoria de los Algoritmos aca presentados son \'utiles para atacar el problema de MAX SMTI (Maxima Cardinalidad de una 
+instancia I de SMTI), que como se mencion\'o algunos son problemas NP-Hard, los algoritmos mas ambiciosos y mas espec\'ificos seg\'un su
+definici\'on
+\subsubsection{RandBrk}
+	Un \textit{Randomized algorithm}, propuesto por Halld\'orsson 
+en el 2002, definiendo que para un caso, donde solo existen \textit{ties} en la lista de mujeres, donde existe al menos un 
+\textit{tie} de un largo especifico de 2. \indent RandBrk recibe una instancia de un problema SMTI y para un tie de la lista de 
+preferencias de m, se quiebra con igual probabilidad ( si existe una
+lista de $w_1$ y $w_2$, ambas tienen una probabilidad de $0.5$ de
+quedar primero), de este resultado se crea una nueva instacia del 
+tipo SMI, y estas se pueden resolver en tiempo polinomial, con alg\'un
+algoritmo para ello (i.e Gale-Shapley Algorithm)\cite{MagnusKazuo04Rand}.
+
+\subsubsection{LocalSearch}
+
+Este metodo fue propuesto en el 2010 por Mirco Gelain\cite{Gelain10}  y b\'asicamente menciona:
+
+\begin{itemize}
+\item Para una instancia I de SMTI, comenzamos con un Matching M generado de manera Random o por generado por alguna heuristica
+\item En cada paso siguiente, nos movemos en el vecindario a un nuevo Matching M, el neighborhood de M ($N(M)$), corresponden a todos los 
+Matchings M luego de remover un \textit{Blocking Pair}.
+\item Luego de movernos en el Neighborhood y remover un \textit{Blockin Pair} (m,w) desde M, las parejas de \textbf{m} y 
+\textbf{w} ($m'$,$w'$) quedan solteros.
+\item Nos movemos a un Matching $M' \in N(M)$, tal que $f(M')\leq f(M'')$, siendo $f(M) = nbp(M) + ns(M)$, con $nbp(M)$ el n\'umero 
+de blockings pair en M y $ns(M)$  el n\'umero de solteros en M.
+\item Si M es estable, su neighborhood/Vecindario esta vacio y se debe aplicar un restart (Random).
+\end{itemize}
+
+Durante todo el algoritmo, se mantiene las mejoras encontradas, notamos que si no se ha encontrado un Matching M estable, se utiliza 
+el que tiene menor valor de la funci\'on de evaluaci\'on $f(M)$, y en caso de no encontrar, es aquel con la menor cantidad de solteros.
+
+Para evitar el estancamiento en un m\'inimo local, hacemos un movimiento random con una probabilidad \textit{p}, basada en un 
+par\'ametro del algoritmo. El algoritmo finaliza cuando se crea un Matching perfecto (Matching estable sin solteros), o luego de una 
+cantidad especifica de pasos.
+
+\subsubsection{Algoritmo Genetico}  
+	Una implementaci\'on de un algoritmo genetico para el problema SM consiste en una representaci\'on de los cromosomas como una lista
+(o arreglo) de hombres o mujeres que se encuentran en pareja, por ejemplo, el arreglo [2 , 3, 1], corresponde a la mujer 2 con el hombre 1, la mujer 3 con el hombre 1, etc.
+	Para esta implementaci\'on son necesarios el arreglo y las listas de preferencias, estas pueden ser creadas de manera aleatoria 
+o con alguna heur\'istica de selecci\'on. A trav\'es de las iteraciones las listas de preferencias se mantienen constantes , s\'olo trabajando 
+con el arreglo. 
+
+Los algoritmos gen\'eticos buscan resultados a trav\'es de t\'ecnicas de cruzamiento y mutaci\'on
+\begin{itemize}
+\item El \textbf{cruzamiento} se crea tomando dos nodos padres, combinandolos de una manera especifica un nodo hijo, en
+base a ellos. La manera mas com\'un es eligiendo una posici\'on especifica, quebrar los nodos padres en esa posici\'on y tomando 
+las piezas restantes crear los nodos hijos uniendo las piezas complementarias.\indent De todas maneras este metodo no
+es posible de utilizar en Stable Marriage Problem, ya que la mayor\'ia de los resultados ser\'ian inconsistentes, o valores repetidos para 
+un Matching, de esto, en 1999 Aldershof y Carducci utilizan un metodo llamado \textit{cyclic crossover}\cite{Aldershof99Gen}.
+
+\begin{itemize}
+\item Cyclic crossover consiste que de cromosoma padre usara un valor $x_1$ en una posici\'on espec\'ifica y lo ponemos en la misma 
+posici\'on en el nodo Hijo. 
+\item Luego, vemos en la misma posici\'on de $x_1$ en el segundo 
+cromosoma padre, tomamos el valor correspondiente (llamado gen opuesto) y lo ponemos en el nodo Hijo 1, en la posici\'on correspondiente segun el nodo padre.
+\item Ahora se elige el valor $x_2$, pero esta vez seg\'un la posici\'on en el primer nodo padre, ahora se elige el gen opuesto (en el segundo padre) y se pone en el nodo Hijo 1, seg\'un la posici\'on que se encuentra en padre.
+\item Se avanza con el mismo procedimiento hasta que encontremos un 
+n\'umero que ya exista en el Nodo Hijo 1, Los valores utilizados se copian al Nodo Hijo 2 (Que hasta ahora esta vaci\'o)
+\item finalmente los valores incompletos en ambos nodos hijos se rellenan con los valores del segundo nodo Padre 
+\end{itemize}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|}
+Step & Padres & Hijos \\ \hline
+1 & Padre 1: [ 3, \textbf{2}, 5, 1, 4 ] & Child 1 : [ , 2, , , ] \\
+  & Padre 2: [ 1, \textbf{3}, 4, 2, 5 ] & Child 2 : [] \\ \hline
+2 & Padre 1: [ \textbf{3}, 2, 5, 1, 4 ] & Child 1 : [ 3, 2, , , ] \\
+  & Padre 2: [ \textbf{1}, 3, 4, 2, 5 ] & Child 2 : [] \\ \hline
+3 & Parent 1: [ 3, 2, 5, \textbf{1}, 4 ] & Child 1 : [ 3, 2, , 1, ] \\
+  & Parent 2: [ 1, 3, 4, \textbf{2}, 5 ] & Child 2 : [] \\ \hline
+4 & Parent 1: [ 3, 2, \textbf{5}, 1, \textbf{4} ] & Child 1 : [3,2, ,1,] \\ 
+  & Parent 2: [ 1, 3, 4, 2, 5 ] & Child 2 : [ , , 5, , 4 ] \\ \hline
+5 & Parent 1: [ 3, 2, 5, 1, 4 ] & \textbf{Child 1 : [3,2,4,1,5]} \\ 
+  & Parent 2: [ 1, 3, 4, 2, 5 ] & \textbf{Child 2 : [1,3,5,2,4]} \\ \hline
+\end{tabular}
+\caption{Cyclic Crossover, desde la posici\'on 2\cite{ThesisIoannis10}}
+\end{table}
+
+
+\item El metodo de \textbf{mutaci\'on}, tiene las mismas dificultades que el cruzamiento. Para SM se generan dos funciones de 
+mutaci\'on donde se elige una de ellas cada vez que se utilize la mutaci\'on. La primera funci\'on se hace un swap entre un cierto 
+porcentaje de elementos del vector, ya que al igual que el poblema de cruzamiento cambiar solo un valor implicaria un valor duplicado, 
+y asi mantener la matching aceptable. La otra funci\'on que es posible utilizar, es seleccionando todos pares inestables (blocking
+pairs) y elegir un valor random entre ellos y cambiar ese elemento con otro valor random
+\end{itemize}
+
+\section{Modelo Matem\'atico}
+Un modelo matematico, formulado para programaci\'on lineal:\cite{ThesisPodhradsky10}
+\subsection{Variables}
+\begin{itemize}
+\item $X_{i,j}$ corresponde al par $m_i$, $w_j$ si esta un Matching estable.\\
+\item A corresponde un grupo de pares aceptados
+\item Espacio de Busqueda: $2^{(m*w)}$
+\end{itemize}
+\subsection{Funcion Objetivo}
+\begin{equation*}
+max \underset{i}{\sum} \underset{j}{\sum} x_{i,j}
+\end{equation*}
+
+\subsection{Restricciones}
+\begin{align*}
+\forall w \underset{i}{\sum} x_{i,w} \leq 1 \\
+\forall m \underset{j}{\sum} x_{m,j} \leq 1 \\
+\forall(m,w) \in A: \underset{j}{\sum} x_{m,j} + \underset{i}{\sum} x_{i,w} - x_{m,w} \geq 1 \\
+\forall (m,w) \notin A = 0 \\
+\forall (m,w) \in {0,1}
+\end{align*}
+
+
+\section{Descripci\'on del algoritmo}
+C\'omo fue implementando, interesa la implementaci\'on m\'as que el algoritmo gen\'erico, es decir,
+si se tiene que implementar SA, lo que se espera es que se explique en pseudo c\'odigo la estructura
+general y en p\'arrafo explicativo cada parte como fue implementada para su caso particular, si
+se utilizan operadores se debe explicar por que se utiliz\'o ese operador, si fuera el caso de una
+t\'ecnica completa, si se utiliza recursi\'on o no, etc. En este punto no se espera que se incluya
+c\'odigo, eso va aparte.
+
+\section{Experimentos}
+Se necesita saber como experimentaron, como definieron par\'ametros, como los fueron modificando, cuales 
+problemas se trataron, instancias, por que ocuparon esos problemas.
+
+\section{Resultados}
+Que fue lo que se logr\'o con la experimentaci\'on, incluir tablas y par\'ametros, gr\'aficos si fuera
+posible, lo m\'as explicativo posible.
+
+\section{Conclusiones}
+De acuerdo a la introducci\'on que se hizo, entregar afirmaciones RELEVANTES basadas en los experimentos
+y sus resultados.
+
+
+\section{Conclusiones}
+%%Stable Marriage, es un problema sencillo de explicar y a pesar de ser un tema relativamente nuevo, pero que con el tiempo han aparecido autores que 
+%%han contribuido con otras aproximaciones del mismo problema con representaciones mas complejas como Stable Marriage problem with Incomplete List and 
+%%Ties, 
+%%se han estudiado aspectos de la resoluci\'on del problema, ya sea creando matching mas igualitarios entre hombres y mujeres que en las representaciones 
+%%originales de Gale y Shapley generaban soluciones \textit{man-optimal} o \textit{woman-optimal}, de las variaciones de SM, ya sea SM, SMI, SMT y SMTI 
+%%entregan modelos a problemas reales, por ejemplo crear parejas o compa\~neros de cuarto en la facultad de una universidad puede ser resuelto a traves 
+%%de alguna variaci\'on del problema Stable Marriage.\\
+%%\indent Al igual que se han creado nuevas variaciones del problema, con el tiempo se han estudiado y creado distintos algoritmos para poder resolver 
+%%estos problemas, siendo el mas ambicioso SMTI, ya que las variaciones Stable Marriage Problem with Ties o Stable Marriage with Incomplete List, se han
+%%encontrado distintos algoritmos que resuelven obtienen un Matching M en tiempos polinomiales entre el orden de $O(n log(n))$ y $O(n^4)$, variando seg\'
+%%un el tipo de 
+%%Matching que se desea encontrar, por ejemplo encontrar un Matching \textit{man-optimal}, un Matching \textit{Weakly Stable} o un Matching \textit{sex-
+%%equalitarian}, pueden representar Matching distintos basados en sus criterios en tiempos de ejecuci\'on distintos.\\
+%%\indent De todo esto el problema mas ambicioso no es encontrar un Matching \textit{estable}, para un problema SMTI, si no encontrar todos los matching 
+%%con la maxima cardinalidad posible (MAX-SMTI) e incluso con la menor cardinalidad posible (MIN SMTI), ya que ambos problemas son NP-Hard y no pueden ser
+%%resueltos en tiempos polinomiales. Actualmente se han presentado una serie de algoritmos para obtener soluciones de SM, como algoritmos geneticos que 
+%%explora y explota soluciones en base a una soluci\'on incial para pasar a soluciones mas optimas de SM, los algoritmos LocalSearch y RndBrk atacan el 
+%%NP-Hardness del problema SMTI, donde para ciertas condiciones (i.e Ties en un solo lado (Hombre o Mujer) de largo 2 para el algoritmo RndBrk),
+%%encontrar soluciones para estos problemas. 
+\section{Bibliograf\'ia}
+\bibliographystyle{plain}
+\bibliography{Referencias}
+
+
+
+\end{document} 

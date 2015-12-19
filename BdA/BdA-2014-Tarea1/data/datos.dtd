@@ -1,0 +1,54 @@
+<!DOCTYPE encuesta [
+	<!ELEMENT encuesta (preguntas,sansanos)>
+	<!ELEMENT preguntas (datosPregunta, opinionPregunta, trabajoPregunta, estudioPregunta, universidadPregunta, capacidadesPregunta)>
+	<!ELEMENT datosPregunta (pregunta*)>
+	<!ELEMENT opinionPregunta (pregunta*)>
+	<!ELEMENT trabajoPregunta (pregunta*)>
+	<!ELEMENT estudioPregunta (pregunta*)>
+	<!ELEMENT universidadPregunta (pregunta*)>
+	<!ELEMENT capacidadesPregunta (pregunta*)>
+	<!ELEMENT pregunta (#PCDATA)>
+	<!ATTLIST pregunta pid NMTOKEN #REQUIRED
+					   tag CDATA #IMPLIED>
+	<!ELEMENT sansanos (sansano*)>
+	<!ELEMENT sansano (datos, opinion,trabajo,estudio,universidad,capacidades)>
+	<!ELEMENT datos (edad,nivel,puntaje,media,pregrado,carrera,egreso?,titulacion?,ciudad)>
+	<!ELEMENT opinion (uchile?, uc?, usach?, udec?, utalca?, inacap?, pucv?, uai?, duoc?, uv?, ubiobio?)>
+	<!ELEMENT trabajo (preguntasTrabajo*)>
+	<!ELEMENT estudio (preguntasEstudio*)>
+	<!ELEMENT universidad (prestigio?, formacion?, base?, plan?, carreras?, calidadDocente?)>
+	<!ELEMENT capacidades (preguntasCapacidad*)>
+	<!ELEMENT edad (#PCDATA)>
+	<!ELEMENT nivel (#PCDATA)>
+	<!ELEMENT puntaje (#PCDATA)>
+	<!ELEMENT media (#PCDATA)>
+	<!ELEMENT pregrado (#PCDATA)>
+	<!ELEMENT carrera (#PCDATA)>
+	<!ELEMENT egreso (#PCDATA)>
+	<!ELEMENT titulacion (#PCDATA)>
+	<!ELEMENT ciudad (#PCDATA)>
+	<!ELEMENT uchile (#PCDATA)>
+	<!ELEMENT uc (#PCDATA)>
+	<!ELEMENT usach (#PCDATA)>
+	<!ELEMENT udec (#PCDATA)>
+	<!ELEMENT utalca (#PCDATA)>
+	<!ELEMENT inacap (#PCDATA)>
+	<!ELEMENT pucv (#PCDATA)>
+	<!ELEMENT uai (#PCDATA)>
+	<!ELEMENT duoc (#PCDATA)>
+	<!ELEMENT uv (#PCDATA)>
+	<!ELEMENT ubiobio (#PCDATA)>
+	<!ELEMENT prestigio (#PCDATA)>
+	<!ELEMENT formacion (#PCDATA)>
+	<!ELEMENT base (#PCDATA)>
+	<!ELEMENT plan (#PCDATA)>
+	<!ELEMENT carreras (#PCDATA)>
+	<!ELEMENT calidadDocente (#PCDATA)>
+	<!ELEMENT preguntasTrabajo (#PCDATA)>
+	<!ELEMENT preguntasEstudio (#PCDATA)>
+	<!ELEMENT preguntasCapacidad (#PCDATA)>
+	<!ATTLIST sansano sansano_id NMTOKEN #REQUIRED>
+	<!ATTLIST preguntasTrabajo tag (situacionTrabajo|motivo|contEstudios|tamanioEmpresa|cargo|tiempo|estado|sueldo|sector|trabajoEspecialidad|tiempoBuscando|sueldoActual|expectativas) #IMPLIED>
+	<!ATTLIST preguntasEstudio tag (postgrado|hijo|postgradoFuturo|postgradoUSM|padreUSM|parienteUSM|proceso|infrastructura|experiencia) #IMPLIED>
+	<!ATTLIST preguntasCapacidad tag (adaptacion|compromiso|empatia|productividad|autocuidado|frustacion|liderazgo|comEfectiva|delegar|negociacion|planificacion|gestion|capTrabajarEquipo|capActualizacion|relacionesPublicas|pensamientoAnalitico|manejoTec|domInglesEscr|domInglesHabl|dinamismo|orientacionCliente) #IMPLIED>
+]>

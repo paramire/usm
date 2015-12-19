@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Tarea 1 - Base de Datos Avanzadas</title>
+	<!--Para Google Chart-->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="js/funciones.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+</head>
+<body>
+	<center>
+	<div id="header">
+		<h2 id="titulo">Tarea #1 Bases de Datos Avanzadas</h2>
+	</div>
+	<div id="create">
+		<h2 id="titulo">Seleccione el archivo CSV</h2>
+		<input id="uploader" type="file" onchange="javascript: loadCSV(this);"/>
+		<div id="divDescarga" >
+			<a download="datos.xml" id="linkDeDescarga">Descargar XML</a>
+		</div>
+	</div>
+	<div id="carga">
+		<h2 id="titulo">Seleccione el archivo XML</h2>
+		<input id="uploaderXML" type="file" onchange="javascript: loadXML(this);"/>
+	</div>
+	<div id="grafico">
+		<h2 id="titulo">Graficos</h2>
+			<div id="containerGraficos">
+				<div id="graficoEstudiosPadres"></div>
+				<div id="graficoSueldo"></div>
+				<div id="graficoRemuneracionAcorde"></div>
+			</div>
+	</div>
+	<div id="tablas">
+		<h2 id="titulo">Tables</h2>
+		<div id="infTable">
+			<select id="campo" name="campo" onchange="createTable()">
+				<option value="" disabled selected style="display:none;">Label</option>
+			</select>
+		</div>
+		<div id="contTable">			
+				<table id="miTabla">
+				</table>
+
+		</div>
+	</div>
+	<div id="buscador">
+		<h2 id="titulo">Buscador</h2>
+		<div id="infBuscador">
+			<a id="referBuscador" onClick="createBuscador()"> Agregar Criterio</a>
+			<button type="button" id="botonBuscador" onclick="search()">Buscar</button><br/>
+		</div>
+	</div>
+	</center>
+</body>
+</html>

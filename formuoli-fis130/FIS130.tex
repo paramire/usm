@@ -1,0 +1,109 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{listings}
+
+
+%% FOR THIS PAPER
+\usepackage{dblfloatfix}
+\usepackage{fixltx2e}
+\usepackage{mwe}
+\usepackage{lipsum}
+\usepackage{amsmath,bm}
+\usepackage{enumitem}
+
+\parskip 1mm
+\setlength{\topmargin}{0pt}
+\oddsidemargin  0.5cm
+\evensidemargin 0.5cm
+\textwidth      15.5cm
+\textheight     21.0cm
+\headsep        4 mm\usepackage{fixltx2e}
+\parindent      0.5cm
+\setlength{\itemsep}{2pt}
+
+\pagestyle{fancyplain}
+
+\lhead{FIS 130}
+\rhead{\bf \it Formuoli}
+\lfoot{}
+\cfoot{\bf \thepage}
+\rfoot{}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{Formuli}
+\date{\includegraphics[scale=0.4]{images/formuoli.jpg}}
+\begin{document}
+\maketitle
+\section{Definiciones}
+\begin{itemize}
+\item $n$: Numero de Moles
+\item $m$: Masa
+\item $M, PM$: Masa Molecular
+\item $V_{rms}^2$: Velocidad cuadratica media
+\end{itemize}
+
+\section{Temperatura y Calor}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Celsius a Farenheit 
+\[T_f = \frac{9}{5}T_c + 32\]
+\item Farenheit a Celsius
+\[T_c = \frac{5}{9}(T_f -32)\]
+\item Calor Especifico $(c)$ y Calor Especifico molar $(c_{mol})$
+\[ c = \frac{Q}{m\Delta T}\]
+\[ c_{mol} = \frac{Q}{n\Delta T}\]
+\item Transferencia de calor
+\[ Q = m\cdot c \cdot \left(T_f - T_i\right) \]
+\[ dQ = m\cdot c\cdot dT\]
+\[ dQ = n\cdot c_{mol}\cdot dT\]
+\item Calor Latente
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Fusión
+\[ Q = mL_f\]
+\item Vaporización
+\[ Q = mL_v\]
+\end{itemize}
+\item Flujo de Calor
+\[ H = \frac{dQ}{dt} = -kA\cdot \frac{dT}{dx} \]
+\item Flujo Calor entre \textit{n} superficies
+\[ H = - {\left(\frac{k}{L}\right)}_e \cdot A \cdot (T_i - T_s) \]
+\[ \frac{1}{\left(\frac{k}{L}\right)_e} = \frac{1}{\frac{k_1}{L_1}} + \ldots + \frac{1}{\frac{k_n}{L_n}} \]
+\item Primera Ley de la Termodinamica
+\[\Delta U = Q - W \]
+\begin{itemize}
+\item $Q > 0$, El sistema absorbe Calor. 
+\item $Q < 0$, El sistema libera Calor.
+\item $W < 0$, El sistema se le ejerce fuerza.
+\item $W > 0$, El sistema ejerce fuerza.
+\end{itemize}
+
+\end{itemize}
+\section{Gases}
+\begin{itemize}
+\item Presión
+\[ P = \frac{F_N}{A} \]
+\item Ecuación de los Gases Ideales
+\[ PV = nRT \]
+\[ P = R'\rho T \]
+\[ R' = \frac{R}{PM} \]
+\[ P = \frac{\rho V_{rms}^2}{3} \]
+\item Trabajo realizado por un Gas
+\[ W = \int P dV \]
+\item Energia interna de \textit{n} moles
+\[ U = g_l \frac{1}{2} nRT\]
+\item Energia Cinetica de \textit{n} moles
+\[ E_k = g_l \frac{1}{2} nRT \]
+\end{itemize}
+
+
+\section{Unidades}
+\begin{itemize}
+\item Presion
+\[\left[\frac{N}{m^2}\right] =  \left[Pa\right] \]
+\end{itemize}
+%\lipsum[1-4]
+\end{document}
